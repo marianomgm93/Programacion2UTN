@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.math.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -30,6 +31,18 @@ public class Main {
                     break;
                 case 6:
                     ejercicios.ej6();
+                    break;
+                case 7:
+                    ejercicios.ej7();
+                    break;
+                case 8:
+                        ejercicios.ej8();
+                    break;
+                case 9:
+                        ejercicios.ej9();
+                    break;
+                case 10:
+                    ejercicios.ej10();
                     break;
                 default:
                     System.out.println("Te gustan los machos");
