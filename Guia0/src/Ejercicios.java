@@ -13,8 +13,7 @@ public class Ejercicios {
      * El valor de cada variable, la suma de numN + numA, la diferencia de numA -
      * numN, el valor numérico correspondiente al carácter que contiene la
      * variable numC.
-     *
-     * @Params no param.
+     * @Params: no param.
      */
     public void ej1() {
         int numN = 0;
@@ -139,6 +138,7 @@ public class Ejercicios {
         nombre = leer.nextLine();
         System.out.println("Buenos dias!! " + nombre);
     }
+
     /**
      * 10. Realizar un programa que lee por teclado el valor del radio de una
      * circunferencia, calcula y muestra por pantalla la longitud y el área de la
@@ -146,13 +146,60 @@ public class Ejercicios {
      * radio^2. Para este ejercicio averiguar sobre la clase Math
      */
 
-    public  void ej10()
-        {
-            System.out.println("Dale boludito, mete el radio");
-            float radius=leer.nextFloat();
-            System.out.println("Longitud: "+(2*Math.PI*radius)+"\nArea: "+(Math.pow(Math.PI*radius,2)));
-        }
+    public void ej10() {
+        System.out.println("Dale boludito, mete el radio");
+        float radius = leer.nextFloat();
+        System.out.println("Longitud: " + (2 * Math.PI * radius) + "\nArea: " + (Math.pow(Math.PI * radius, 2)));
+    }
 
+    /**
+     * 11. Realizar un programa que pase una velocidad en Km/h a m/s. La
+     * velocidad se lee por teclado. Cálculo: velocidadMS = velocidadKm * 1000 /
+     * 3600
+     * @Params no params.
+     */
+    public void ej11() {
+        System.out.println("Ingrese la velocidad en Km/h");
+        double velocidad=leer.nextDouble();
+        System.out.println((velocidad*1000/3600));
+    }
+    /**
+     *  12. Realizar un programa que lea la longitud de los catetos de un triángulo
+     *  rectángulo y calcule la longitud de la hipotenusa según el teorema de
+     *  Pitágoras.
+     * @Params no params.
+     */
+    public void ej12(){
+        int catetoOpuesto,catetoAdyacente;
+        System.out.println("longitud del cateto opuesto: ");
+        catetoOpuesto=leer.nextInt();
+        leer.nextLine();
+        System.out.println("longitud del cateto Adyacente: ");
+        catetoAdyacente=leer.nextInt();
+        leer.nextLine();
+        System.out.printf("%.2f%n",Math.sqrt(Math.pow(catetoAdyacente,2)+Math.pow(catetoOpuesto,2)));
+    }
+    /**
+     *  13. Realizar un programa que calcula el volumen de una esfera. El valor de
+     *  radio se debe pedir por teclado. Cálculo: volumen = 4/3 * PI * radio^3
+     */
+    public void ej13(){
+        System.out.println("Ingrese el radio de la esfera:");
+        double radio=leer.nextDouble();
+        System.out.println("volumen = " + 4/3 * Math.PI * Math.pow(radio,3));
+    }
+    /**
+     *  14. Realizar un programa que lee un número de 3 cifras y muestra sus
+     *  cifras por separado
+     */
+    public void ej14(){
+        System.out.println("Ingrese un numero para separar:");
+        int numero=leer.nextInt();
+        String numString= ""+numero;
+        for(int i=0; i<numString.length() ; i++){
+            System.out.println(numString.charAt(i));
+        }
+    }
 }
 
 

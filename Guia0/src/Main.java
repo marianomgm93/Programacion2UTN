@@ -6,13 +6,13 @@ public class Main {
         Ejercicios ejercicios = new Ejercicios();
         int opcion;
         char continuar = 's';
-        System.out.println("Dame la opcion,papi\n");
         Scanner leer = new Scanner(System.in);
-        opcion = leer.nextInt();
 
 
         do {
 
+        System.out.println("Dame la opcion,papi\n");
+        opcion = leer.nextInt();
             switch (opcion) {
                 case 1:
                     ejercicios.ej1();
@@ -43,6 +43,18 @@ public class Main {
                     break;
                 case 10:
                     ejercicios.ej10();
+                    break;
+                case 11:
+                    ejercicios.ej11();
+                    break;
+                case 12:
+                    ejercicios.ej12();
+                    break;
+                case 13:
+                    ejercicios.ej13();
+                    break;
+                case 14:
+                    ejercicios.ej14();
                     break;
                 default:
                     System.out.println("Te gustan los machos");
