@@ -13,6 +13,7 @@ public class Ejercicios {
      * El valor de cada variable, la suma de numN + numA, la diferencia de numA -
      * numN, el valor numérico correspondiente al carácter que contiene la
      * variable numC.
+     *
      * @Params: no param.
      */
     public void ej1() {
@@ -156,50 +157,167 @@ public class Ejercicios {
      * 11. Realizar un programa que pase una velocidad en Km/h a m/s. La
      * velocidad se lee por teclado. Cálculo: velocidadMS = velocidadKm * 1000 /
      * 3600
+     *
      * @Params no params.
      */
     public void ej11() {
         System.out.println("Ingrese la velocidad en Km/h");
-        double velocidad=leer.nextDouble();
-        System.out.println((velocidad*1000/3600));
+        double velocidad = leer.nextDouble();
+        System.out.println((velocidad * 1000 / 3600));
     }
+
     /**
-     *  12. Realizar un programa que lea la longitud de los catetos de un triángulo
-     *  rectángulo y calcule la longitud de la hipotenusa según el teorema de
-     *  Pitágoras.
+     * 12. Realizar un programa que lea la longitud de los catetos de un triángulo
+     * rectángulo y calcule la longitud de la hipotenusa según el teorema de
+     * Pitágoras.
+     *
      * @Params no params.
      */
-    public void ej12(){
-        int catetoOpuesto,catetoAdyacente;
+    public void ej12() {
+        int catetoOpuesto, catetoAdyacente;
         System.out.println("longitud del cateto opuesto: ");
-        catetoOpuesto=leer.nextInt();
+        catetoOpuesto = leer.nextInt();
         leer.nextLine();
         System.out.println("longitud del cateto Adyacente: ");
-        catetoAdyacente=leer.nextInt();
+        catetoAdyacente = leer.nextInt();
         leer.nextLine();
-        System.out.printf("%.2f%n",Math.sqrt(Math.pow(catetoAdyacente,2)+Math.pow(catetoOpuesto,2)));
+        System.out.printf("%.2f%n", Math.sqrt(Math.pow(catetoAdyacente, 2) + Math.pow(catetoOpuesto, 2)));
     }
+
     /**
-     *  13. Realizar un programa que calcula el volumen de una esfera. El valor de
-     *  radio se debe pedir por teclado. Cálculo: volumen = 4/3 * PI * radio^3
+     * 13. Realizar un programa que calcula el volumen de una esfera. El valor de
+     * radio se debe pedir por teclado. Cálculo: volumen = 4/3 * PI * radio^3
      */
-    public void ej13(){
+    public void ej13() {
         System.out.println("Ingrese el radio de la esfera:");
-        double radio=leer.nextDouble();
-        System.out.println("volumen = " + 4/3 * Math.PI * Math.pow(radio,3));
+        double radio = leer.nextDouble();
+        System.out.println("volumen = " + 4 / 3 * Math.PI * Math.pow(radio, 3));
     }
+
     /**
-     *  14. Realizar un programa que lee un número de 3 cifras y muestra sus
-     *  cifras por separado
+     * 14. Realizar un programa que lee un número de 3 cifras y muestra sus
+     * cifras por separado
      */
-    public void ej14(){
+    public void ej14() {
         System.out.println("Ingrese un numero para separar:");
-        int numero=leer.nextInt();
-        String numString= ""+numero;
-        for(int i=0; i<numString.length() ; i++){
+        int numero = leer.nextInt();
+        String numString = "" + numero;
+        for (int i = 0; i < numString.length(); i++) {
             System.out.println(numString.charAt(i));
         }
     }
+
+    /**
+     * 15. Realizar un programa que lea un número entero N de 5 cifras y muestre
+     * las cifras que ocupan posiciones impares
+     */
+    public void ej15() {
+        System.out.println("Ingrese un entero de 5 cifras: ");
+        int num = leer.nextInt();
+        String numStr = String.valueOf(num);
+        for (int i = 0; i < numStr.length(); i++) {
+            System.out.println(((i + 1) % 2 == 0) ? "" : ("Cifra " + (i + 1) + " es impar = " + numStr.charAt(i)));
+        }
+    }
+
+    /**
+     * 16. Realizar un programa que lea tres números enteros H, M, S que
+     * contienen hora, minutos y segundos respectivamente, y comprueba si la
+     * hora que indican es una hora válida.
+     */
+    public void ej16() {
+        int horas, minutos, segundos;
+        System.out.println("Ingrese horas");
+        horas = leer.nextInt();
+        System.out.println("Ingrese minutos");
+        minutos = leer.nextInt();
+        System.out.println("Ingrese segundos");
+        segundos = leer.nextInt();
+        System.out.println(((horas >= 0 && horas <= 24) && (minutos >= 0 && minutos <= 60) && (segundos >= 0 && segundos <= 60)) ? "Hora valida" : "Hora invalida");
+    }
+
+    /**
+     * 17. Realizar un programa Java que pida por teclado el nombre, edad y
+     * salario de una persona, y muestra el salario dependiendo de:
+     * ● Siesmenorde16notiene edad para trabajar
+     * ● Entre19 y 50 años el salario es un 5 por ciento más
+     * ● Entre51 y 60 años el salario es un 10 por ciento más
+     * ● Siesmayorde60elsalario es un 15 por ciento más
+     */
+    public void ej17() {
+        int edad;
+        System.out.println("Ingrese edad:");
+        edad = leer.nextInt();
+        System.out.println((edad < 16) ? "no tiene edad para trabajar" :
+                (edad >= 16 && edad <= 18) ? "Sueldo pelado" :
+                        (edad >= 19 && edad <= 50) ? "5 por ciento más" :
+                                (edad >= 51 && edad < 60) ? "10 por ciento más" : "15 por ciento más");
+    }
+
+    /**
+     * 18. Crea un programa que pida al usuario su altura y su peso, y muestre por
+     *  pantalla su índice de masa corporal y si se encuentra en un rango
+     *  saludable
+     *  Bajo peso	Menos de 18,4
+     * Peso normal	18,5 a 24,9
+     * Sobrepeso	25 a 29,9
+     * Obesidad Grado I	30 a 34,9
+     * Obesidad Grado II	35 a 39,9
+     * Obesidad Grado III	Igual o mayor a 40
+     */
+    public void ej18(){
+        double peso,altura,imc;
+        System.out.println("Ingrese altura");
+        altura=leer.nextDouble();
+        System.out.println("Ingrese peso");
+        peso=leer.nextDouble();
+        imc=peso/Math.pow(altura,2);
+        System.out.println((imc<=18.4) ? "Bajo peso" :
+                (imc<25) ? "Peso normal" :
+                        (imc<30) ? "Sobrepeso" :
+                                (imc<35) ? "Obesidad Grado I" :
+                                        (imc<40) ? "Obesidad Grado II" : "Obesidad Grado III");
+
+    }
+
+    /**
+     * 19. Realizar un programa Java que calcule el promedio de un arreglo de
+     *  números enteros. Realizar variantes con arreglos ya inicializados e ingreso
+     *  por teclado
+     */
+    public void ej19(){
+        int option;
+        System.out.println("1-Carga manual\n2-Carga automatica");
+        option=leer.nextInt();
+        switch (option){
+            case 1:
+
+        }
+    }
+
+    private int[] cargarArrManual(){
+        char option='y';
+        int[] arr;
+        do{
+            System.out.println("Ingrese un numero");
+            /*
+            *
+            * COMPLETAR---
+            * */
+
+        }while(Character.toLowerCase(option)=='y');
+    }
+    private double promediarArr(int [] arr){
+        int suma=0;
+        if (arr == null) {
+            return -1;
+        }
+        for(int num:arr){
+            suma+=num;
+        }
+        return (double)suma/arr.length();
+    }
+
 }
 
 
