@@ -68,6 +68,15 @@ public class Main {
                 case 18:
                     ejercicios.ej18();
                     break;
+                case 19:
+                    ejercicios.ej19();
+                    break;
+                case 20:
+                    ejercicios.ej20();
+                    break;
+                case 21:
+                    ejercicios.ej21();
+                    break;
                 default:
                     System.out.println("Te gustan los machos");
                     break;

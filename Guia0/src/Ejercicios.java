@@ -1,3 +1,5 @@
+import java.sql.SQLOutput;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ejercicios {
@@ -256,66 +258,160 @@ public class Ejercicios {
 
     /**
      * 18. Crea un programa que pida al usuario su altura y su peso, y muestre por
-     *  pantalla su índice de masa corporal y si se encuentra en un rango
-     *  saludable
-     *  Bajo peso	Menos de 18,4
+     * pantalla su índice de masa corporal y si se encuentra en un rango
+     * saludable
+     * Bajo peso	Menos de 18,4
      * Peso normal	18,5 a 24,9
      * Sobrepeso	25 a 29,9
      * Obesidad Grado I	30 a 34,9
      * Obesidad Grado II	35 a 39,9
      * Obesidad Grado III	Igual o mayor a 40
      */
-    public void ej18(){
-        double peso,altura,imc;
+    public void ej18() {
+        double peso, altura, imc;
         System.out.println("Ingrese altura");
-        altura=leer.nextDouble();
+        altura = leer.nextDouble();
         System.out.println("Ingrese peso");
-        peso=leer.nextDouble();
-        imc=peso/Math.pow(altura,2);
-        System.out.println((imc<=18.4) ? "Bajo peso" :
-                (imc<25) ? "Peso normal" :
-                        (imc<30) ? "Sobrepeso" :
-                                (imc<35) ? "Obesidad Grado I" :
-                                        (imc<40) ? "Obesidad Grado II" : "Obesidad Grado III");
+        peso = leer.nextDouble();
+        imc = peso / Math.pow(altura, 2);
+        System.out.println((imc <= 18.4) ? "Bajo peso" :
+                (imc < 25) ? "Peso normal" :
+                        (imc < 30) ? "Sobrepeso" :
+                                (imc < 35) ? "Obesidad Grado I" :
+                                        (imc < 40) ? "Obesidad Grado II" : "Obesidad Grado III");
 
     }
 
     /**
      * 19. Realizar un programa Java que calcule el promedio de un arreglo de
-     *  números enteros. Realizar variantes con arreglos ya inicializados e ingreso
-     *  por teclado
+     * números enteros. Realizar variantes con arreglos ya inicializados e ingreso
+     * por teclado
      */
-    public void ej19(){
+    public void ej19() {
         int option;
+        int size;
+        System.out.println("Ingrese tamanno del arreglo");
+        size = leer.nextInt();
+        int[] arr = new int[size];
         System.out.println("1-Carga manual\n2-Carga automatica");
-        option=leer.nextInt();
-        switch (option){
+        option = leer.nextInt();
+
+        switch (option) {
             case 1:
-
+                arr = cargarArrManual(size);
+                arrToString(arr);
+                break;
+            case 2:
+                arr = cargarArrAuto(size);
+                arrToString(arr);
+                break;
+            default:
+                System.out.println("La opcion ingresada no existe");
+                break;
         }
+        System.out.println("El promedio es: " + promediarArr(arr));
+
     }
 
-    private int[] cargarArrManual(){
-        char option='y';
-        int[] arr;
-        do{
+    private int[] cargarArrManual(int num) {
+        char option = 'y';
+        int[] arr = new int[num];
+        for (int i = 0; i < num; i++) {
             System.out.println("Ingrese un numero");
-            /*
-            *
-            * COMPLETAR---
-            * */
-
-        }while(Character.toLowerCase(option)=='y');
+            arr[i] = leer.nextInt();
+        }
+        return arr;
     }
-    private double promediarArr(int [] arr){
-        int suma=0;
+
+    private int[] cargarArrAuto(int num) {
+        int[] arr = new int[num];
+        for (int i = 0; i < num; i++) {
+            arr[i] = (int) (Math.random() * 10);
+        }
+        return arr;
+    }
+
+    private double promediarArr(int[] arr) {
+        int suma = 0;
         if (arr == null) {
             return -1;
         }
-        for(int num:arr){
-            suma+=num;
+        for (int num : arr) {
+            suma += num;
         }
-        return (double)suma/arr.length();
+        return (double) suma / arr.length;
+    }
+
+    private double promediarArr(double[] arr) {
+        int suma = 0;
+        if (arr == null) {
+            return -1;
+        }
+        for (double num : arr) {
+            suma += num;
+        }
+        return (double) suma / arr.length;
+    }
+
+    private void arrToString(int[] arr) {
+        for (int num : arr) {
+            System.out.println(num + " ");
+        }
+    }
+
+    private void arrToString(double[] arr) {
+        for (double num : arr) {
+            System.out.printf("%.2f\n", num);
+        }
+    }
+/// FIN 19
+    /***
+     * 20. Realizar un programa Java que solicite un número al usuario y calcule la
+     * suma de todos los números naturales, hasta el número recibido inclusive.
+     */
+    public void ej20() {
+        System.out.printf("Ingrese ehh el numero");
+        int num = leer.nextInt();
+        int sum = 0;
+
+        for (int i = 1; i <= num; i++) {
+            sum += i;
+
+        }
+        System.out.printf("La sumatoria es " + sum);
+    }
+
+    /**
+     * 21. Realizar un programa Java que lea 20 temperaturas correspondientes a
+     * un mes y calcule el maximo, el minimo y el promedio. Utilizar un array
+     * double.
+     * (Lo voy a hacer utilizando random)
+     */
+    public void ej21() {
+        double[] arr = new double[20];
+        for (int i=0;i<arr.length;i++) {
+            arr[i] = Math.random() * 40 - 10;
+        }
+        arrToString(arr);
+        System.out.printf("min: %.2f\n", min(arr));
+        System.out.printf("max: %.2f\n", max(arr));
+        System.out.println("promedio: " + promediarArr(arr));
+    }
+    private double max(double[] arr){
+        double max=arr[0];
+        for(double num:arr){
+            if(max<num)
+                max=num;
+        }
+        return max;
+    }
+    private double min(double[] arr){
+        double min=arr[0];
+        for(double num:arr){
+            if(min>num)
+                min=num;
+        }
+        return min;
     }
 
 }
