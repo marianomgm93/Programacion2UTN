@@ -28,7 +28,16 @@ public class Main {
 
                     break;
                 case 2:
-
+                    /**
+                     *  En el main, realice las siguientes operaciones:
+                     *  1. Inicialice una cuenta con un monto inicial de 15000.
+                     *  2. Realice una operación de crédito de 2500
+                     */
+                    CuentaBanco cuenta=new CuentaBanco("juan",15000);
+                    cuenta.mostrarCuenta();
+                    cuenta.credito(2500);
+                    System.out.println("Operacion credito");
+                    cuenta.mostrarCuenta();
                     break;
 
 
