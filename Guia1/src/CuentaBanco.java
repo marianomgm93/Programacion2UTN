@@ -52,7 +52,7 @@ public class CuentaBanco {
      * a. El método crédito que representa un depósito de dinero en la
      * cuenta. Este método debe devolver el balance luego de la operación.
      * @param cantidad double
-     * @return
+     * @return double balance
      */
     public double credito(double cantidad){
         this.balance+=cantidad;
