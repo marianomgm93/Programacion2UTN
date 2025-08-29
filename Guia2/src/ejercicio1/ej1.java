@@ -30,5 +30,6 @@ public class ej1 {
         Scanner sc=new Scanner(System.in);
         ArrayList <Empleado> empleados=new ArrayList<>();
         menu.menuEmpleados(sc,empleados);
+
     }
 }
