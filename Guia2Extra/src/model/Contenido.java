@@ -1,3 +1,5 @@
+package model;
+
 public abstract class Contenido {
     private static int total;
     private String Titulo;
@@ -52,12 +54,10 @@ public abstract class Contenido {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Contenido{");
-        sb.append("Titulo='").append(Titulo).append('\'');
-        sb.append(", anno=").append(anno);
-        sb.append(", director=").append(director);
-        sb.append(", id=").append(id);
-        sb.append('}');
-        return sb.toString();
+        return  "Titulo='" + Titulo + '\'' +
+                ", anno=" + anno +
+                ", director=" + director +
+                ", id=" + id ;
+
     }
 }

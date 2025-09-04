@@ -1,3 +1,5 @@
+package model;
+
 public class Director {
     private String nombre;
     private String nacionalidad;
@@ -28,10 +30,9 @@ public class Director {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Director{");
-        sb.append("nombre='").append(nombre).append('\'');
-        sb.append(", nacionalidad='").append(nacionalidad).append('\'');
-        sb.append('}');
-        return sb.toString();
+        return "Director{" +
+                "nombre='" + nombre + '\'' +
+                ", nacionalidad='" + nacionalidad + '\'' +
+                '}';
     }
 }

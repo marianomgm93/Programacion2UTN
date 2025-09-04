@@ -1,7 +1,10 @@
-public class Pelicula extends Contenido{
+package model;
+
+public class Pelicula extends Contenido {
     private double duracion;
     private double creditos;
     private String descripcion;
+    private Categoria categoria;
 
     public Pelicula() {
     }
@@ -11,6 +14,13 @@ public class Pelicula extends Contenido{
         this.duracion = duracion;
         this.creditos = creditos;
         this.descripcion = descripcion;
+        this.categorizar();
+    }
+
+    public void categorizar() {
+        if (this.duracion > 120)
+            this.categoria = Categoria.VERSION_EXTENDIDA;
+        else this.categoria = Categoria.VERSION_ESTANDAR;
     }
 
     public double getDuracion() {
@@ -39,11 +49,12 @@ public class Pelicula extends Contenido{
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Pelicula{");
-        sb.append("duracion=").append(duracion);
-        sb.append(", creditos=").append(creditos);
-        sb.append(", descripcion='").append(descripcion).append('\'');
-        sb.append('}');
-        return sb.toString();
+        return "Pelicula{" + super.toString() + " " +
+                "duracion=" + duracion +
+                ", duracion total=" + (duracion+creditos) +
+                ", creditos=" + creditos +
+                ", descripcion='" + descripcion + '\'' +
+                ", categoria=" + categoria +
+                '}';
     }
 }

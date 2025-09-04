@@ -1,7 +1,10 @@
-public class Serie extends Contenido{
+package model;
+
+public class Serie extends Contenido {
     private int episodios;
     private int temporadas;
     private boolean finalizada;
+    private Categoria categoria;
 
     public Serie() {
     }
@@ -11,6 +14,21 @@ public class Serie extends Contenido{
         this.episodios = episodios;
         this.temporadas = temporadas;
         this.finalizada = finalizada;
+        this.categorizar();
+    }
+
+    public void categorizar() {
+        if (this.finalizada == true && this.temporadas < 2)
+            this.categoria = Categoria.MINISERIE;
+        else this.categoria = Categoria.SERIE;
+    }
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
     }
 
     public int getEpisodios() {
@@ -39,11 +57,11 @@ public class Serie extends Contenido{
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Serie{");
-        sb.append("episodios=").append(episodios);
-        sb.append(", temporadas=").append(temporadas);
-        sb.append(", finalizada=").append(finalizada);
-        sb.append('}');
-        return sb.toString();
+        return "Serie{" + super.toString() + " " +
+                "episodios=" + episodios +
+                ", temporadas=" + temporadas +
+                ", finalizada=" + finalizada +
+                ", categoria=" + categoria +
+                '}';
     }
 }
