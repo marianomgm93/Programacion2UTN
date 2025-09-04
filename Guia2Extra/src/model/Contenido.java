@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Objects;
+
 public abstract class Contenido {
     private static int total;
     private String Titulo;
@@ -53,6 +55,18 @@ public abstract class Contenido {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Contenido contenido = (Contenido) o;
+        return anno == contenido.anno && id == contenido.id && Objects.equals(Titulo, contenido.Titulo) && Objects.equals(director, contenido.director);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(Titulo, anno, director, id);
+    }
+
+    @Override
     public String toString() {
         return  "Titulo='" + Titulo + '\'' +
                 ", anno=" + anno +
@@ -60,4 +74,6 @@ public abstract class Contenido {
                 ", id=" + id ;
 
     }
+
+
 }

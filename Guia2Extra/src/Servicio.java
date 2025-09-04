@@ -10,6 +10,7 @@ public class Servicio {
         for (Contenido c : contenidos) {
             if (c instanceof Pelicula)
                 pelis.add((Pelicula) c);
+
         }
         return pelis;
     }

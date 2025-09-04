@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Objects;
+
 public class Pelicula extends Contenido {
     private double duracion;
     private double creditos;
@@ -49,12 +51,26 @@ public class Pelicula extends Contenido {
 
     @Override
     public String toString() {
-        return "Pelicula{" + super.toString() + " " +
-                "duracion=" + duracion +
-                ", duracion total=" + (duracion+creditos) +
-                ", creditos=" + creditos +
-                ", descripcion='" + descripcion + '\'' +
-                ", categoria=" + categoria +
-                '}';
+        final StringBuilder sb = new StringBuilder("Pelicula{");
+        sb.append(super.toString());
+        sb.append("duracion=").append(duracion);
+        sb.append(", creditos=").append(creditos);
+        sb.append(", descripcion='").append(descripcion).append('\'');
+        sb.append(", categoria=").append(categoria);
+        sb.append('}');
+        return sb.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Pelicula pelicula = (Pelicula) o;
+        return Double.compare(duracion, pelicula.duracion) == 0 && Double.compare(creditos, pelicula.creditos) == 0 && Objects.equals(descripcion, pelicula.descripcion) && categoria == pelicula.categoria;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), duracion, creditos, descripcion, categoria);
     }
 }

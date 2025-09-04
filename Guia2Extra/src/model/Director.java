@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Objects;
+
 public class Director {
     private String nombre;
     private String nacionalidad;
@@ -30,9 +32,22 @@ public class Director {
 
     @Override
     public String toString() {
-        return "Director{" +
-                "nombre='" + nombre + '\'' +
-                ", nacionalidad='" + nacionalidad + '\'' +
-                '}';
+        final StringBuilder sb = new StringBuilder("Director{");
+        sb.append("nombre='").append(nombre).append('\'');
+        sb.append(", nacionalidad='").append(nacionalidad).append('\'');
+        sb.append('}');
+        return sb.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Director director = (Director) o;
+        return Objects.equals(nombre, director.nombre) && Objects.equals(nacionalidad, director.nacionalidad);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nombre, nacionalidad);
     }
 }
