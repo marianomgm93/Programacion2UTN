@@ -1,3 +1,5 @@
+package models;
+
 public enum Intensidad {
 
     ALTO("Bajale un cambio"),
