@@ -133,9 +133,8 @@ public class Servicios {
 
     public Ave cargarAve(Scanner sc) {
         Ave nuevaAve = new Ave();
-        int opcion, opcion2;
-        char continuar1, continuar2;
-        boolean valido1 = false, valido2 = false;
+        int opcion;
+        boolean continuar = false;
 
 
         System.out.println("ingrese el Nombre de su animal:");
@@ -159,56 +158,49 @@ public class Servicios {
             switch (opcion) {
                 case 1:
                     nuevaAve.setEstadoPlumaje(EstadoPlumaje.MALO);
-                    valido1 = true;
-
                     break;
 
                 case 2:
                     nuevaAve.setEstadoPlumaje(EstadoPlumaje.INTERMEDIO);
-                    valido1 = true;
 
                     break;
 
                 case 3:
                     nuevaAve.setEstadoPlumaje(EstadoPlumaje.BUENO);
-                    valido1 = true;
-
                     break;
 
                 default:
                     System.out.println("Ingrese una opcion valida");
-                    nuevaAve.setEstadoPlumaje(EstadoPlumaje.INTERMEDIO);
-                    break;
+
             }
 
-        } while (!valido1);
+        } while (nuevaAve.getEstadoPlumaje() == null);
+
 
         do {
 
             System.out.println("ingrese su capacidad de vuelo 1 si, 2 no");///boolean
-            opcion2 = sc.nextInt();
+            opcion = sc.nextInt();
             sc.nextLine();
-            switch (opcion2) {
+            switch (opcion) {
                 case 1:
                     nuevaAve.setCapacidadDeVuelo(true);
-                    valido2 = true;
+                    continuar = true;
 
                     break;
 
                 case 2:
                     nuevaAve.setCapacidadDeVuelo(false);
-                    valido2 = true;
-
+                    continuar = true;
 
                     break;
 
                 default:
                     System.out.println("Ingrese una opcion valida");
-                    nuevaAve.setCapacidadDeVuelo(false);
 
                     break;
             }
-        } while (!valido2);
+        } while (!continuar);
 
 
         return nuevaAve;
@@ -224,12 +216,13 @@ public class Servicios {
         leer.nextLine();
         System.out.println("ingrese su Nombre");
         nuevo.setNombre((leer.nextLine()));
-        for (Animal a : animales) {
-            System.out.println(a);
-        }
-        System.out.println("Ingrese el id del animal para asignar al cuidador");
-        nuevo.setAnimal(buscarAnimal(animales, leer.nextInt()));
-
+        do {
+            for (Animal a : animales) {
+                System.out.println(a);
+            }
+            System.out.println("Ingrese el id del animal para asignar al cuidador");
+            nuevo.setAnimal(buscarAnimal(animales, leer.nextInt(), leer));
+        } while (nuevo.getAnimal() == null);
         lista.add(nuevo);
 
     }
@@ -245,12 +238,17 @@ public class Servicios {
 
         }
     */
-    public Animal buscarAnimal(ArrayList<Animal> animales, int id) {
-        for (Animal a : animales) {
-            if (a.getId() == id)
-                return a;
+    public Animal buscarAnimal(ArrayList<Animal> animales, int id, Scanner sc) {
+        if (!animales.isEmpty()) {
+            for (Animal a : animales) {
+                if (a.getId() == id)
+                    return a;
+            }
+        } else {
+            System.out.println("No existe ningun animal creado");
+            cargarAnimal(animales, sc);
+
         }
-        System.out.println("No existe el animal");
         return null;
     }
 
