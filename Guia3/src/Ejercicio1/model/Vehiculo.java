@@ -1,6 +1,8 @@
 package Ejercicio1.model;
 
-public abstract class Vehiculo implements ITransporte{
+import java.util.Comparator;
+
+public abstract class Vehiculo implements ITransporte, Comparable<Vehiculo> {
     private int capacidad;
     private TipoTransporte tipo;
     private int id;
@@ -29,5 +31,26 @@ public abstract class Vehiculo implements ITransporte{
         sb.append(", tipo=").append(tipo);
         sb.append('}');
         return sb.toString();
+    }
+
+    @Override
+    public int compareTo(Vehiculo v) {
+        return this.id-v.id;
+    }
+
+    public int getCapacidad() {
+        return capacidad;
+    }
+
+    public TipoTransporte getTipo() {
+        return tipo;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public static int getTotal() {
+        return total;
     }
 }

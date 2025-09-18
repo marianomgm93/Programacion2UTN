@@ -6,6 +6,9 @@ import Ejercicio1.model.Tranvia;
 import Ejercicio1.model.Vehiculo;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 /**
  * 1. Implementar un sistema básico para la gestión de diferentes tipos de
@@ -55,8 +58,17 @@ public class Main {
         vehiculos.add(new Tranvia(90,"222"));
         vehiculos.add(new Tranvia(90,"223"));
         vehiculos.add(new Tranvia(90,"224"));
-        for(Vehiculo nombre:vehiculos){
-            System.out.println(nombre);
+        HashMap<Integer,Vehiculo> vehiculoHashMap=new HashMap<Integer, Vehiculo>();
+        for(Vehiculo v:vehiculos){
+            vehiculoHashMap.put(v.getId(),v);
         }
+        Iterator<Map.Entry<Integer,Vehiculo>> it=vehiculoHashMap.entrySet().iterator();
+
+        while(it.hasNext()){
+            Map.Entry<Integer,Vehiculo> entrada=it.next();
+            System.out.println(entrada.getValue());
+        }
+
+
     }
 }
