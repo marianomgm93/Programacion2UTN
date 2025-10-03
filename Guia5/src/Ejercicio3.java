@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ejercicio3 {
@@ -6,9 +7,17 @@ public class Ejercicio3 {
         int numero = (int) (Math.random() * 500 + 1);
         int option, intentos = 0;
         do {
-            try {
                 intentos++;
+                System.out.println("Ingresa un numero: ");
+            try {
                 option = sc.nextInt();
+                sc.nextLine();
+
+            } catch (InputMismatchException e) {
+                sc.nextLine();
+                option=0;
+                System.out.println("Tendra un intento menos a pesar de haber ingresado un caracter invalido");
+            }
 
                 if (option > numero)
                     System.out.println("Mas abajo");
@@ -16,10 +25,7 @@ public class Ejercicio3 {
                     System.out.println("Mas arriba");
                 else
                     System.out.println("Acertaste!");
-            } catch (MyException e) {
-                option=0;
-                System.out.println(e.getMessage());
-            }
         } while (numero != option);
+        System.out.println("Cantidad de intentos: " + intentos);
     }
 }

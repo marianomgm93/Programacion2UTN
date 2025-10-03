@@ -49,8 +49,8 @@ public class Main {
     public static void main(String[] args) {
         ///System.out.println(devuelveNumero(4));
         Scanner sc=new Scanner(System.in);
-        System.out.println(sc.nextInt());
-
+        Ejercicio3 ej3=new Ejercicio3();
+        ej3.launch(sc);
     }
     //  2. Explique lo que sucede en el siguiente código y por qué.
     public static int devuelveNumero(int num) {
