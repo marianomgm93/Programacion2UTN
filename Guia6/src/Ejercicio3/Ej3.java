@@ -9,6 +9,18 @@ package Ejercicio3;
  */
 public class Ej3 {
     public static void main(String[] args) {
+        OperacionMatematica<Integer> operacionEnteros = new OperacionMatematica<>();
+        Integer a=10;
+        Integer b=5;
+        System.out.println("Suma Enteros: " + operacionEnteros.sumar(a,b));
+        System.out.println("Resta Enteros: " + operacionEnteros.restar(a,b));
+        System.out.println("Multiplicación Enteros: " + operacionEnteros.multiplicar(a,b));
+        System.out.println("División Enteros: " + operacionEnteros.dividir(a,b));
 
+        OperacionMatematica<Double> operacionDecimales = new OperacionMatematica<>(10.5, 2.5);
+        System.out.println("Suma Decimales: " + operacionDecimales.sumar());
+        System.out.println("Resta Decimales: " + operacionDecimales.restar());
+        System.out.println("Multiplicación Decimales: " + operacionDecimales.multiplicar());
+        System.out.println("División Decimales: " + operacionDecimales.dividir());
     }
 }
