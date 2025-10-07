@@ -1,0 +1,51 @@
+package Ejercicio1.Libreria;
+
+import java.util.HashMap;
+
+public class Libreria {
+    private HashMap<Integer, Libro> libros;
+
+    public Libreria() {
+        libros = new HashMap<>();
+    }
+
+    public void agregarLibro(Integer id, Libro libro) {
+        libros.put(id, libro);
+    }
+
+    public Libro obtenerLibro(Integer id) {
+        return libros.get(id);
+    }
+
+    public boolean eliminarLibro(Integer id) {
+        return libros.remove(id) != null;
+    }
+
+    public HashMap<Integer, Libro> getLibros() {
+        return libros;
+    }
+    public String mostrarLibros(){
+        StringBuilder sb = new StringBuilder();
+        for (Libro libro : libros.values()) {
+            sb.append(libro.toString()).append("\n");
+        }
+        return sb.toString();
+    }
+    public String buscarLibroPorTitulo(String titulo) {
+        StringBuilder sb = new StringBuilder();
+        for (Libro libro : libros.values()) {
+            if (libro.getNombre().equalsIgnoreCase(titulo)) {
+                sb.append(libro.toString()).append("\n");
+            }
+        }
+        return sb.toString();
+    }
+    public boolean actualizarPrecio(Integer id, double nuevoPrecio) {
+        Libro libro = libros.get(id);
+        if (libro != null) {
+            libro.setPrecio(nuevoPrecio);
+            return true;
+        }
+        return false;
+    }
+}
