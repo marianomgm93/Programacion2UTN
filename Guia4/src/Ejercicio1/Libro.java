@@ -1,5 +1,3 @@
-package Ejercicio1;
-
 public class Libro {
     private static Integer contadorId = 0;
     private Integer id;
@@ -17,10 +15,6 @@ public class Libro {
 
     public Integer getId() {
         return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public String getNombre() {
@@ -55,5 +49,13 @@ public class Libro {
                 ", precio=" + precio +
                 ", año=" + año +
                 '}';
+    }
+
+    public static Integer getContadorId() {
+        return contadorId;
+    }
+
+    public static void setContadorId(Integer contadorId) {
+        Libro.contadorId = contadorId;
     }
 }

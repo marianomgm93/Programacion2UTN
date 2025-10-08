@@ -1,6 +1,7 @@
-package Ejercicio1.Libreria;
-
+import java.security.KeyStore.Entry;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 public class Libreria {
     private HashMap<Integer, Libro> libros;
@@ -47,5 +48,16 @@ public class Libreria {
             return true;
         }
         return false;
+    }
+
+  
+    public double precioTotal(){
+        double total=0;
+        Iterator<Map.Entry<Integer,Libro>> it=libros.entrySet().iterator();
+        while(it.hasNext()){
+            Libro lib=it.next().getValue();
+            total+=lib.getPrecio();
+        }
+        return total;
     }
 }
