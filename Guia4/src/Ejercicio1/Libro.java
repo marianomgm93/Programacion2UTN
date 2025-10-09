@@ -1,4 +1,4 @@
-public class Libro {
+public class Libro implements Comparable<Libro> {
     private static Integer contadorId = 0;
     private Integer id;
     private String nombre;
@@ -57,5 +57,10 @@ public class Libro {
 
     public static void setContadorId(Integer contadorId) {
         Libro.contadorId = contadorId;
+    }
+
+
+    public int compareTo(Libro o) {
+        return ((this.precio-o.precio)>=0)? 1:-1;
     }
 }
