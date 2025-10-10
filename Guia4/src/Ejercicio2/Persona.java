@@ -1,5 +1,3 @@
-package Ejercicio2;
-
 public class Persona {
 	private Integer dni;
 	private String nombre = "";
@@ -95,7 +93,7 @@ public class Persona {
  método para que te sea más fácil. No será visible al exterior.
  	*/
  	public Integer generaDNI(){
- 		return (int) (Math.random()*100000000);
+ 		return (int) (Math.random()*90000000+10000000);
  	}
  	@Override
  	public String toString() {

@@ -1,6 +1,6 @@
-package Ejercicio2;
-
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 public class Ej2 {
 	public static void main(String[] args) {
@@ -24,8 +24,16 @@ public class Ej2 {
 		personas.put(individuo3.getDni(), individuo3);
 		personas.put(individuo4.getDni(), individuo4);
 		personas.put(individuo5.getDni(), individuo5);
-
-
+		Iterator <Map.Entry<Integer,Persona>> it=personas.entrySet().iterator();
+		StringBuilder sb=new StringBuilder();
+		Persona aux;
+		while (it.hasNext()) {
+			aux=it.next().getValue();
+			sb.append("\n......Persona.....\n");
+			sb.append(aux);
+			sb.append("IMC: ").append(aux.calcularIMC());
+		}
+		System.out.println(sb);
 
 	}
 }
