@@ -12,15 +12,17 @@ public class Ej3 {
         OperacionMatematica<Integer> operacionEnteros = new OperacionMatematica<>();
         Integer a=10;
         Integer b=5;
-        System.out.println("Suma Enteros: " + operacionEnteros.sumar(a,b));
-        System.out.println("Resta Enteros: " + operacionEnteros.restar(a,b));
-        System.out.println("Multiplicación Enteros: " + operacionEnteros.multiplicar(a,b));
-        System.out.println("División Enteros: " + operacionEnteros.dividir(a,b));
+        System.out.println("Suma Enteros: " + operacionEnteros.suma(a,b));
+        System.out.println("Resta Enteros: " + operacionEnteros.resta(a,b));
+        System.out.println("Multiplicación Enteros: " + operacionEnteros.multiplicacion(a,b));
+        System.out.println("División Enteros: " + operacionEnteros.division(a,b));
+        OperacionMatematica<Double> operacionDecimales = new OperacionMatematica<>();
+        Double c=5.5,d=3.4;
+        System.out.println("Suma Decimales: " + operacionDecimales.suma(c,d));
+        System.out.println("Resta Decimales: " + operacionDecimales.resta(c,d));
+        System.out.println("Multiplicación Decimales: " + operacionDecimales.multiplicacion(c,d));
+        System.out.println("División Decimales: " + operacionDecimales.division(c,d));
 
-        OperacionMatematica<Double> operacionDecimales = new OperacionMatematica<>(10.5, 2.5);
-        System.out.println("Suma Decimales: " + operacionDecimales.sumar());
-        System.out.println("Resta Decimales: " + operacionDecimales.restar());
-        System.out.println("Multiplicación Decimales: " + operacionDecimales.multiplicar());
-        System.out.println("División Decimales: " + operacionDecimales.dividir());
+
     }
 }
