@@ -52,4 +52,11 @@ public class Decoracion {
     public void setPropociones(String propociones) {
         this.propociones = propociones;
     }
+
+    @Override
+    public String toString() {
+        return "Decoracion [codigo=" + codigo + ", nombre=" + nombre + ", propociones=" + propociones + ", precio="
+                + precio + "]";
+    }
+    
 }

@@ -3,6 +3,7 @@ public class Artista {
 	private int edad;
 	private String nacionalidad;
 	
+
 	public String getNombre() {
 		return nombre;
 	}

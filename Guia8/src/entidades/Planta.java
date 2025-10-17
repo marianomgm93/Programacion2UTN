@@ -25,7 +25,7 @@ public class Planta {
         this.cuidado = cuidado;
         this.clasificacion = clasificacion;
     }
-
+    
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
