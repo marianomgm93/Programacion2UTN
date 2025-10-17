@@ -1,0 +1,61 @@
+{
+  "alumnos": [
+    {
+      "nombre": "Lucía Fernández",
+      "edad": 20,
+      "matricula": "A1023",
+      "carrera": "Ingeniería Informática",
+      "semestre": 3,
+      "promedio_general": 9.2,
+      "materias": [
+        { "nombre": "Programación I", "nota": 9.0, "creditos": 6 },
+        { "nombre": "Matemática I", "nota": 8.5, "creditos": 8 },
+        { "nombre": "Bases de Datos", "nota": 10, "creditos": 6 }
+      ],
+      "direccion": {
+        "calle": "Av. San Martín 1245",
+        "ciudad": "Rosario",
+        "provincia": "Santa Fe"
+      },
+      "activo": true
+    },
+    {
+      "nombre": "Tomás Rivas",
+      "edad": 22,
+      "matricula": "A1044",
+      "carrera": "Ingeniería Electrónica",
+      "semestre": 6,
+      "promedio_general": 7.8,
+      "materias": [
+        { "nombre": "Circuitos II", "nota": 7.0, "creditos": 8 },
+        { "nombre": "Física II", "nota": 8.0, "creditos": 7 },
+        { "nombre": "Sistemas Digitales", "nota": 8.4, "creditos": 6 }
+      ],
+      "direccion": {
+        "calle": "Belgrano 998",
+        "ciudad": "Córdoba",
+        "provincia": "Córdoba"
+      },
+      "activo": false
+    },
+    {
+      "nombre": "Sofía López",
+      "edad": 21,
+      "matricula": "A1099",
+      "carrera": "Diseño Gráfico",
+      "semestre": 4,
+      "promedio_general": 8.6,
+      "materias": [
+        { "nombre": "Diseño Digital", "nota": 9.5, "creditos": 6 },
+        { "nombre": "Fotografía", "nota": 8.0, "creditos": 5 },
+        { "nombre": "Teoría del Color", "nota": 8.3, "creditos": 4 }
+      ],
+      "direccion": {
+        "calle": "Rivadavia 2021",
+        "ciudad": "Buenos Aires",
+        "provincia": "Buenos Aires"
+      },
+      "activo": true
+    }
+  ]
+}

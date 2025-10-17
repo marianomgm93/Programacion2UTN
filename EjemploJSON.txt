@@ -1,0 +1,38 @@
+"mascota":{
+	"persona":{"dni":123456,
+		"nombre":"Mariano", 
+		"apellido":"Gozalez", 
+		"direccion":{"cuba", 1000}, 
+		"contactos":["contacto1":{"nombre":"nombre1", 
+					"apellido":"apellido1", 
+					"numerosTelefonicos":[{"numero":123456,
+								"tipo":"Celular", 
+								"caracteristica":223}], 
+					"numerosTelefonicos": 1594566}]},
+	"raza":"Labrador",
+	"fechaNacimiento":{"dia":12,"mes":7, "ano":2012},
+	"visitas":[{	"fechaVisita":{"dia":2,"mes":10, "ano":2025},
+			"motivo":"chequeo"
+			"diagnostico":"Todo bien"}],
+	"observaciones":["Es color dorado"]}
+
+"vehiculo":{	"radicacion":{"dorrego", 1000},
+		"patente":{"pais":"Argentina", "letrasIniciales":"AH", "numeros":123, "letrasFinales":"DJ"},
+		"marca":"Toyota",
+		"modelo":"Corolla",
+		"anio":2025,
+		"duenio":{"dni":123456,
+			"nombre":"Mariano", 
+			"apellido":"Gozalez", 
+			"direccion":{"cuba", 1000}, 
+			"contactos":[	"contacto1":{"nombre":"nombre1", 
+					"apellido":"apellido1", 
+					"numerosTelefonicos":[{"numero":123456,
+								"tipo":"Celular", 
+								"caracteristica":223}], 
+			"numerosTelefonicos": 1594566}]},
+		"multas":[{"fecha":{"dia":2,"mes":10, "ano":2025}, "infraccion":"Prohibido estacionar", "costo":500000.00}]}
+
+
+
+

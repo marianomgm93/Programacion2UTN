@@ -1,0 +1,44 @@
+{
+  "vuelos": [
+    {
+      "codigo": "AR1234",
+      "origen": "Buenos Aires",
+      "destino": "Madrid",
+      "fecha": "2025-11-01",
+      "duracion_horas": 12.5,
+      "precio_usd": 950.00,
+      "pasajeros": [
+        { "nombre": "Juan Pérez", "dni": "40333111", "asiento": "14A" },
+        { "nombre": "Ana Ruiz", "dni": "39455990", "asiento": "14B" }
+      ],
+      "piloto": {
+        "nombre": "Carlos Díaz",
+        "licencia": "F-7789"
+      },
+      "aerolinea": {
+        "nombre": "Aerolíneas Argentinas",
+        "pais": "Argentina"
+      }
+    },
+    {
+      "codigo": "IB5678",
+      "origen": "Madrid",
+      "destino": "Roma",
+      "fecha": "2025-12-02",
+      "duracion_horas": 2.0,
+      "precio_usd": 180.00,
+      "pasajeros": [
+        { "nombre": "Laura Gómez", "dni": "42344661", "asiento": "6C" },
+        { "nombre": "Diego Torres", "dni": "38221590", "asiento": "6D" }
+      ],
+      "piloto": {
+        "nombre": "Lucía Ramos",
+        "licencia": "F-9922"
+      },
+      "aerolinea": {
+        "nombre": "Iberia",
+        "pais": "España"
+      }
+    }
+  ]
+}

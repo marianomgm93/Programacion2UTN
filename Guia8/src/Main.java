@@ -1,6 +1,26 @@
+import entidades.Clasificacion;
+import entidades.Planta;
+import entidades.Vivero;
+import excepciones.TipoInvalidoE;
+
+import java.io.IOException;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+        Planta p1=new Planta("Potus",200.00,10,"bajos", Clasificacion.HIBRIDO);
+        Vivero vivero=new Vivero("plantas.txt","accesorios.txt","decoraciones.txt","tickets.txt");
+        try {
+            vivero.agregar(p1);
+        } catch (TipoInvalidoE e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        ArrayList<String> plantas=vivero.cargar("plantas.txt");
+        for(String planta:plantas)
+            System.out.println(planta);
     }
 }
 /**

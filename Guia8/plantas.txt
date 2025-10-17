@@ -1,0 +1,1 @@
+Planta{nombre='Potus', codigo=0, precio=200.0, stock=10, cuidado='bajos', clasificacion=HIBRIDO}

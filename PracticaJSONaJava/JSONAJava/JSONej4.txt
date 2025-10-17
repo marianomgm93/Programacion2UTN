@@ -1,0 +1,34 @@
+{
+  "catalogo": [
+    {
+      "titulo": "Inception",
+      "director": "Christopher Nolan",
+      "anio": 2010,
+      "duracion_minutos": 148,
+      "generos": ["Ciencia ficción", "Acción", "Thriller"],
+      "actores": ["Leonardo DiCaprio", "Ellen Page", "Tom Hardy"],
+      "puntuacion": 8.8,
+      "disponible": true
+    },
+    {
+      "titulo": "The Shawshank Redemption",
+      "director": "Frank Darabont",
+      "anio": 1994,
+      "duracion_minutos": 142,
+      "generos": ["Drama"],
+      "actores": ["Tim Robbins", "Morgan Freeman"],
+      "puntuacion": 9.3,
+      "disponible": false
+    },
+    {
+      "titulo": "Interstellar",
+      "director": "Christopher Nolan",
+      "anio": 2014,
+      "duracion_minutos": 169,
+      "generos": ["Ciencia ficción", "Aventura"],
+      "actores": ["Matthew McConaughey", "Anne Hathaway"],
+      "puntuacion": 8.6,
+      "disponible": true
+    }
+  ]
+}

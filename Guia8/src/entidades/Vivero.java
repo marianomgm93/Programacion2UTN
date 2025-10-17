@@ -1,8 +1,7 @@
 package entidades;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+import java.util.ArrayList;
 
 import excepciones.TipoInvalidoE;
 
@@ -11,6 +10,13 @@ public class Vivero {
     private String archivoAccesorios;
     private String archivoDecoraciones;
     private String archivoTickets;
+
+    public Vivero(String archivoPlantas, String archivoAccesorios, String archivoDecoraciones, String archivoTickets) {
+        this.archivoPlantas = archivoPlantas;
+        this.archivoAccesorios = archivoAccesorios;
+        this.archivoDecoraciones = archivoDecoraciones;
+        this.archivoTickets = archivoTickets;
+    }
 
     private <T> String validarTipo(T prod) throws TipoInvalidoE{
         String nombreArchivo;
@@ -28,12 +34,33 @@ public class Vivero {
 
     public <T> void agregar(T prod) throws TipoInvalidoE,IOException{
         String nombreArchivo=validarTipo(prod);
-        BufferedWriter buffer=new BufferedWriter(new FileWriter(nombreArchivo,true));
+        BufferedWriter buffer=new BufferedWriter(new FileWriter(nombreArchivo,false));
         buffer.write(prod.toString());
         buffer.newLine();
         buffer.close();
     }
+    public ArrayList<String> cargar(String archivo){
+        ArrayList <String> base=new ArrayList<>();
+        int contadorLineas=1;
+        try {
+            BufferedReader buffer = new BufferedReader(new FileReader(archivo));
+            String entrada= buffer.readLine();
+            while(entrada!=null) {
+                base.add(entrada);
+                entrada = buffer.readLine();
+            }
+        }
+        catch(FileNotFoundException e){
+            System.out.println("No se pudo abrir el archivo "+ archivo);
+        } catch (IOException e) {
+            System.out.println("Fallo al leer linea: "+contadorLineas);
+        }
+        return base;
+    }
 
+    public void eliminar(){
+
+    }
 
 
 }

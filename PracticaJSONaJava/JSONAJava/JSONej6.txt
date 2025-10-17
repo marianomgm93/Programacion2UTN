@@ -1,0 +1,27 @@
+{
+  "jugador": {
+    "nombre": "Elyra",
+    "nivel": 12,
+    "vida": 95,
+    "experiencia": 3820,
+    "oro": 245,
+    "inventario": [
+      { "item": "Espada de acero", "ataque": 25, "peso": 5.0 },
+      { "item": "Poción de vida", "cura": 50, "cantidad": 3 },
+      { "item": "Escudo de madera", "defensa": 10, "peso": 8.0 },
+      { "item": "Llave dorada", "uso": "Abrir puerta del castillo" }
+    ],
+    "habilidades": [
+      { "nombre": "Golpe rápido", "daño": 15, "enfriamiento_seg": 5 },
+      { "nombre": "Curación menor", "cura": 30, "enfriamiento_seg": 8 }
+    ],
+    "misiones": [
+      { "nombre": "Derrotar al dragón", "completada": false, "recompensa_oro": 500 },
+      { "nombre": "Recolectar 10 hierbas", "completada": true, "recompensa_oro": 100 }
+    ],
+    "ubicacion": {
+      "region": "Bosque del Oeste",
+      "coordenadas": { "x": 235, "y": 89 }
+    }
+  }
+}

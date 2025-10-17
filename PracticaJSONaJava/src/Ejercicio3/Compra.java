@@ -1,0 +1,54 @@
+package Ejercicio3;
+
+public class Compra {
+    private Usuario usuario;
+    private Carrito carrito;
+}
+/*
+{
+  "usuario": {
+    "id": 1205,
+    "nombre": "María López",
+    "email": "mlopez@example.com",
+    "premium": true,
+    "direccion": {
+      "calle": "Av. Corrientes 3550",
+      "ciudad": "Buenos Aires",
+      "codigo_postal": "C1193"
+    },
+    "metodo_pago": {
+      "tipo": "Tarjeta de crédito",
+      "ultimos_digitos": "4421"
+    }
+  },
+  "carrito": {
+    "productos": [
+      {
+        "id": 1001,
+        "nombre": "Auriculares Bluetooth",
+        "precio_unitario": 59.99,
+        "cantidad": 1,
+        "categoria": "Electrónica"
+      },
+      {
+        "id": 1002,
+        "nombre": "Mouse inalámbrico",
+        "precio_unitario": 25.50,
+        "cantidad": 2,
+        "categoria": "Accesorios"
+      },
+      {
+        "id": 1003,
+        "nombre": "Teclado mecánico RGB",
+        "precio_unitario": 85.90,
+        "cantidad": 1,
+        "categoria": "Accesorios"
+      }
+    ],
+    "total": 196.89,
+    "fecha_compra": "2025-10-17",
+    "entregado": false
+  }
+}
+
+ */

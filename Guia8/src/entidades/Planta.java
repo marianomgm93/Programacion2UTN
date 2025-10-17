@@ -73,4 +73,17 @@ public class Planta {
     public Clasificacion getClasificacion() {
         return clasificacion;
     }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Planta{");
+        sb.append("nombre='").append(nombre).append('\'');
+        sb.append(", codigo=").append(codigo);
+        sb.append(", precio=").append(precio);
+        sb.append(", stock=").append(stock);
+        sb.append(", cuidado='").append(cuidado).append('\'');
+        sb.append(", clasificacion=").append(clasificacion);
+        sb.append('}');
+        return sb.toString();
+    }
 }
