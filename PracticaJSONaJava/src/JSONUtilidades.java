@@ -13,6 +13,7 @@ public class JSONUtilidades {
 
     public JSONUtilidades() {
     }
+    /*
     public JSONTokener leer(String archivo){
         JSONTokener tokener=null;
         try{
@@ -24,13 +25,17 @@ public class JSONUtilidades {
         return tokener;
     }
 
+
+
     public <T> void  levantarArchivo(String archivo, ArrayList<T> objetos){
         JSONArray arr=new JSONArray(leer(archivo));
 
 
     }
 
-    public String downloadJSON(String archivo) {
+     */
+
+    public static String downloadJSON(String archivo) {
         String rta = "";
         File arch = new File(archivo);
         System.out.println(arch.exists());

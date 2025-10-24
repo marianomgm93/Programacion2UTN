@@ -21,4 +21,31 @@ public class Piloto {
     private int debut;
     private String fecha_nacimiento;
 
+    public Piloto(String nombre, String nacionalidad, int edad, int numero, int campeonatos_ganados, int victorias, int podios, int debut, String fecha_nacimiento) {
+        this.nombre = nombre;
+        this.nacionalidad = nacionalidad;
+        this.edad = edad;
+        this.numero = numero;
+        this.campeonatos_ganados = campeonatos_ganados;
+        this.victorias = victorias;
+        this.podios = podios;
+        this.debut = debut;
+        this.fecha_nacimiento = fecha_nacimiento;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Piloto{");
+        sb.append("nombre='").append(nombre).append('\'');
+        sb.append(", nacionalidad='").append(nacionalidad).append('\'');
+        sb.append(", edad=").append(edad);
+        sb.append(", numero=").append(numero);
+        sb.append(", campeonatos_ganados=").append(campeonatos_ganados);
+        sb.append(", victorias=").append(victorias);
+        sb.append(", podios=").append(podios);
+        sb.append(", debut=").append(debut);
+        sb.append(", fecha_nacimiento='").append(fecha_nacimiento).append('\'');
+        sb.append('}');
+        return sb.toString();
+    }
 }

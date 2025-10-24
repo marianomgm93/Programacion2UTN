@@ -1,0 +1,172 @@
+{
+  "corredores": [
+    {
+      "piloto": {
+        "nombre": "Max Verstappen",
+        "nacionalidad": "Países Bajos",
+        "edad": 27,
+        "numero": 1,
+        "campeonatos_ganados": 3,
+        "victorias": 61,
+        "podios": 96,
+        "debut": 2015,
+        "fecha_nacimiento": "1997-09-30"
+      },
+      "escuderia": {
+        "nombre": "Red Bull Racing",
+        "pais": "Austria",
+        "jefe_equipo": "Christian Horner",
+        "fundacion": 2005,
+        "campeonatos_constructores": 6,
+        "patrocinadores": [
+          "Oracle",
+          "Mobil 1",
+          "Bybit"
+        ]
+      },
+      "vehiculo": {
+        "modelo": "RB21",
+        "motor": "Honda RBPTH001",
+        "potencia_hp": 1050,
+        "peso_kg": 798,
+        "combustible": "ExxonMobil E10",
+        "neumaticos": "Pirelli",
+        "transmision": "8 velocidades semiautomática"
+      },
+      "temporada": {
+        "anio": 2025,
+        "puntos": 320,
+        "posicion_campeonato": 1,
+        "carreras_disputadas": 18,
+        "victorias": 9,
+        "podios": 14
+      }
+    },
+    {
+      "piloto": {
+        "nombre": "Charles Leclerc",
+        "nacionalidad": "Mónaco",
+        "edad": 28,
+        "numero": 16,
+        "campeonatos_ganados": 0,
+        "victorias": 10,
+        "podios": 35,
+        "debut": 2018,
+        "fecha_nacimiento": "1997-10-16"
+      },
+      "escuderia": {
+        "nombre": "Scuderia Ferrari",
+        "pais": "Italia",
+        "jefe_equipo": "Frédéric Vasseur",
+        "fundacion": 1929,
+        "campeonatos_constructores": 16,
+        "patrocinadores": [
+          "Shell",
+          "Ray-Ban",
+          "Santander"
+        ]
+      },
+      "vehiculo": {
+        "modelo": "SF-25",
+        "motor": "Ferrari 066/12",
+        "potencia_hp": 1030,
+        "peso_kg": 798,
+        "combustible": "Shell E10",
+        "neumaticos": "Pirelli",
+        "transmision": "8 velocidades semiautomática"
+      },
+      "temporada": {
+        "anio": 2025,
+        "puntos": 214,
+        "posicion_campeonato": 2,
+        "carreras_disputadas": 18,
+        "victorias": 3,
+        "podios": 9
+      }
+    },
+    {
+      "piloto": {
+        "nombre": "Lewis Hamilton",
+        "nacionalidad": "Reino Unido",
+        "edad": 40,
+        "numero": 44,
+        "campeonatos_ganados": 7,
+        "victorias": 103,
+        "podios": 197,
+        "debut": 2007,
+        "fecha_nacimiento": "1985-01-07"
+      },
+      "escuderia": {
+        "nombre": "Mercedes-AMG Petronas",
+        "pais": "Alemania",
+        "jefe_equipo": "Toto Wolff",
+        "fundacion": 2010,
+        "campeonatos_constructores": 8,
+        "patrocinadores": [
+          "Petronas",
+          "INEOS",
+          "AMD"
+        ]
+      },
+      "vehiculo": {
+        "modelo": "W15",
+        "motor": "Mercedes-AMG F1 M15",
+        "potencia_hp": 1040,
+        "peso_kg": 797,
+        "combustible": "Petronas Primax E10",
+        "neumaticos": "Pirelli",
+        "transmision": "8 velocidades semiautomática"
+      },
+      "temporada": {
+        "anio": 2025,
+        "puntos": 185,
+        "posicion_campeonato": 3,
+        "carreras_disputadas": 18,
+        "victorias": 2,
+        "podios": 7
+      }
+    },
+    {
+      "piloto": {
+        "nombre": "Lando Norris",
+        "nacionalidad": "Reino Unido",
+        "edad": 26,
+        "numero": 4,
+        "campeonatos_ganados": 0,
+        "victorias": 2,
+        "podios": 25,
+        "debut": 2019,
+        "fecha_nacimiento": "1999-11-13"
+      },
+      "escuderia": {
+        "nombre": "McLaren F1 Team",
+        "pais": "Reino Unido",
+        "jefe_equipo": "Andrea Stella",
+        "fundacion": 1966,
+        "campeonatos_constructores": 8,
+        "patrocinadores": [
+          "Google",
+          "Dell Technologies",
+          "OKX"
+        ]
+      },
+      "vehiculo": {
+        "modelo": "MCL39",
+        "motor": "Mercedes-AMG F1 M15 E Performance",
+        "potencia_hp": 1020,
+        "peso_kg": 798,
+        "combustible": "Gulf E10",
+        "neumaticos": "Pirelli",
+        "transmision": "8 velocidades semiautomática"
+      },
+      "temporada": {
+        "anio": 2025,
+        "puntos": 172,
+        "posicion_campeonato": 4,
+        "carreras_disputadas": 18,
+        "victorias": 1,
+        "podios": 6
+      }
+    }
+  ]
+}
