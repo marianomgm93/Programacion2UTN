@@ -1,0 +1,1 @@
+[{"choferDni":"30111222","estado":"FINALIZADO","pasajeros":[{"asiento":22,"nombre":"Juan","dni":"123159"}],"fechaSalida":"2025-10-30T12:53:11.388119100","duracion":10,"id":0,"lugarDestino":"Barcelona","lugarSalida":"Ezeiza"}]
