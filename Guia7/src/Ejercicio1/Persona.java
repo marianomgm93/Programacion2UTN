@@ -23,6 +23,12 @@ public class Persona {
         this.dni = dni;
         this.sexo = sexo;
     }
+    public Persona(JSONObject o) {
+        this.nombre = o.getString("nombre");
+        this.edad = o.getInt("edad");
+        this.dni = o.getInt("dni");
+        this.sexo = o.getString("sexo");
+    }
 
     public String getNombre() {
         return nombre;

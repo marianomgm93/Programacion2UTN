@@ -9,7 +9,7 @@ import java.nio.file.Files;
 public class JSONUtiles {
     public static void upObjeto(String archivo, JSONObject jsonObject) {
         try {
-            BufferedWriter buffer = new BufferedWriter(new FileWriter("src\\Ejercicio1\\" + archivo + ".json", true));
+            BufferedWriter buffer = new BufferedWriter(new FileWriter("src\\Ejercicio1\\" + archivo + ".json"));
             buffer.write(jsonObject.toString());
             buffer.flush();
             buffer.close();
@@ -21,7 +21,7 @@ public class JSONUtiles {
     }
 
     public static void upArreglo(String archivo, JSONArray jsonArr) throws IOException {
-        BufferedWriter buffer = new BufferedWriter(new FileWriter("src\\Ejercicio1\\" + archivo + ".json", true));
+        BufferedWriter buffer = new BufferedWriter(new FileWriter("src\\Ejercicio1\\" + archivo + ".json"));
         buffer.write(jsonArr.toString());
         buffer.flush();
         buffer.close();

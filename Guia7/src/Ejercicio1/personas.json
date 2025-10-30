@@ -1,1 +1,1 @@
-{"sexo":"M","nombre":"Juan","edad":29,"dni":12312312}
+{"codigo":0,"nombreCurso":"Matematicas","inscriptos":[{"sexo":"M","nombre":"Juan","edad":29,"dni":12312312},{"sexo":"F","nombre":"Lucía","edad":34,"dni":45645645},{"sexo":"M","nombre":"Carlos","edad":22,"dni":78978978},{"sexo":"F","nombre":"María","edad":27,"dni":32132132},{"sexo":"F","nombre":"Sofía","edad":31,"dni":65465465}]}
